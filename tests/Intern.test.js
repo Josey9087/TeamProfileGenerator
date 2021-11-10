@@ -34,7 +34,7 @@ describe('Employee', () => {
 
     describe("getID", () => {
         it('Should return the Intern ID', () => {
-            expect(new Intern('Jose', 5, 'JY@gmail.com').getID()).toEqual(5)
+            expect(new Intern('Jose', 5, 'JY@gmail.com').getId()).toEqual(5)
         })
     });
 

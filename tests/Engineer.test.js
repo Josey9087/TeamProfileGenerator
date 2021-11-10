@@ -34,7 +34,7 @@ describe('Employee', () => {
 
     describe("getID", () => {
         it('Should return the Engineer ID', () => {
-            expect(new Engineer('Jose', 5, 'JY@gmail.com').getID()).toEqual(5)
+            expect(new Engineer('Jose', 5, 'JY@gmail.com').getId()).toEqual(5)
         })
     });
 
@@ -50,7 +50,7 @@ describe('Employee', () => {
     });
     describe("getGithub", () => {
         it('Should return the Engineer github username', () => {
-            expect(new Engineer('Jose', 5, 'JY@gmail.com', 'Josey9087').getGithub()).toEqual('Josey9087')
+            expect(new Engineer('Jose', 5, 'JY@gmail.com', 'Josey9087').getGitHub()).toEqual('Josey9087')
         })
     });
 });
