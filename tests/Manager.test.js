@@ -1,9 +1,10 @@
 const { describe, it, expect } = require("@jest/globals");
 const Manager = require("../lib/Manager");
 
-describe('Employee', () => {
+//Test for Manager class
+describe('Manager', () => {
     describe("Constructor", () => {
-        it("Creates a new Engineer", () => {
+        it("Creates a new Manager", () => {
             const Managertest = new Manager();
             expect(typeof Managertest).toBe("object");
         });

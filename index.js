@@ -1,13 +1,18 @@
+// All requires for the code
 const inquirer = require('inquirer')
 const generate = require('./src/generateHTML')
 const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 
+// Array that will be given to generateHtml
 const employeeArray = [];
 
+// First inquirer prompt to begin the process of asking questions.
 promptManager()
 
+// Manager inquirer code, uses inquirer to ask questions then use the Manager class to create a new Manager and push manager
+// into the employeeArray
 function promptManager() {
   return inquirer.prompt([
     {
@@ -41,7 +46,8 @@ function promptManager() {
   })
 };
 
-
+// Engineer inquirer code, uses inquirer to ask questions then use the Engineer class to create a new Engineer and add it
+// into the employeeArray
 function promptEngineer(){
   return inquirer.prompt([
 {
@@ -74,6 +80,8 @@ function promptEngineer(){
 };
 
 
+// Intern inquirer code, uses inquirer to ask questions then use the Intern class to create a new Intern and add it
+// into the employeeArray
 function promptIntern(){
   return inquirer.prompt([
 {
@@ -105,18 +113,19 @@ function promptIntern(){
 })
 };
 
+// This is the inquirer code that prompts the user to add another team member or to finish it and create the html.
 function promptContinue(){
   return inquirer.prompt([
   {
     type: "list",
-    name: "job", 
+    name: "Job", 
     choices: ["Engineer", "Intern", "Finish building my team"]
   },
 ])
 .then((answers) => {
-  if(answers.job === "Engineer"){
+  if(answers.Job === "Engineer"){
     promptEngineer();
-  } else if (answers.job === "Intern"){
+  } else if (answers.Job === "Intern"){
     promptIntern();
   } else {
     generate.generateHTML(employeeArray);

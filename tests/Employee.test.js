@@ -1,6 +1,7 @@
 const { describe, it, expect } = require("@jest/globals");
 const Employee = require("../lib/Employee"); 
 
+//Test for Employee class
 describe('Employee', () => {
     describe("Constructor ", () => {
         it("Creates a new Employee", () => {
