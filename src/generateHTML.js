@@ -34,6 +34,11 @@ const generateHTML = (employeeArray) => {
                         <header class="card-header has-background-info is-flex-direction-column">
                         <p class="card-header-title">${employee.getName()} </p>\n`
         }
+        else if (counter>3){
+            htmlText+= `<div class="column is-4 is-offset-1 card">
+                        <header class="card-header has-background-info is-flex-direction-column">
+                        <p class="card-header-title">${employee.getName()} </p>\n`
+        }
         // the loops adds this text and uses the employee.getName to get the name from the user input.
         else {
             htmlText += `<div class="column card">
